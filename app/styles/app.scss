@@ -1,0 +1,39 @@
+$c-red: #D43F3A;
+$c-dark: #2F2F2F;
+$c-light: #DEDEDE;
+$c-white: #FFFFFF;
+
+// apply a natural box layout model to all elements, but allowing components to change
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+// boilerplate
+body {
+  margin: 0;
+  padding: 0;
+  color: $c-dark;
+}
+
+ul {
+  padding-left: none;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  background: $c-red;
+  margin-top: -1.35rem;
+}
