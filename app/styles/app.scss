@@ -33,7 +33,22 @@ img {
   max-width: 100%;
 }
 
+input {
+  border: $c-dark 0.1rem solid;
+}
+
+button {
+  font-size: 1rem;
+  border: $c-dark 0.05rem solid;
+}
+
 .header {
   background: $c-red;
   margin-top: -1.35rem;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
