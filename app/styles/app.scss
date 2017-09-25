@@ -2,6 +2,8 @@ $c-red: #D43F3A;
 $c-dark: #2F2F2F;
 $c-light: #DEDEDE;
 $c-white: #FFFFFF;
+$c-grey: #C0C0C0;
+
 
 // apply a natural box layout model to all elements, but allowing components to change
 html {
@@ -41,6 +43,17 @@ button {
   font-size: 1rem;
   border: $c-dark 0.05rem solid;
 }
+
+.button {
+  font-size: 1rem;
+  border: $c-dark 0.05rem solid;
+  font-family: sans-serif;
+  padding: 0.2rem;
+  background: $c-grey;
+  color: $c-dark;
+  text-decoration: none;
+}
+
 
 .section {
   padding: 2rem;

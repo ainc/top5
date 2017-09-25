@@ -1,5 +1,6 @@
 <div class="section">
     <div class="container">
+        {{#link-to "index" class="button"}}Home{{/link-to}}
         <div class="list">
             <div class="list__user">
                 <h2>Your Top 5</h2>
@@ -11,6 +12,20 @@
                     <li><input type="checkbox">xxxxxx</li>
                 </ul>
             </div>
+            {{#each data as |item|}}
+                <div class="list__item">
+                    <h3>{{item.name}}</h3>
+                    <button {{action "toggleBody" item}}>View Top 5</button>
+                    {{#if item._display}}
+                        <p>1: {{item.thing1}}</p>
+                        <p>2: {{item.thing2}}</p>
+                        <p>3: {{item.thing3}}</p>
+                        <p>4: {{item.thing4}}</p>
+                        <p>5: {{item.thing5}}</p>
+                        <p>Personal: {{item.personal}}</p>
+                    {{/if}}
+                </div>
+            {{/each}}
         </div>
     </div>
 </div>
