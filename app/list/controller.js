@@ -45,7 +45,7 @@ export default Ember.Controller.extend({
         "thing2": "Finish a basic UI for the top 5 web app",
         "thing3": "Research how to build an audio unit plug-in",
         "thing4": "Get to know the rest of the team",
-        "thing5": "Set up the Chromebit for the TV _displays",
+        "thing5": "Set up the Chromebit for the TV displays",
         "personal": "- Run\n- re-record sax and mix my song\n- go on a hike this weekend"
       },
       {
