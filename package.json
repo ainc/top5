@@ -42,6 +42,7 @@
   },
   "private": true,
   "dependencies": {
-    "ember-cli-sass": "^7.0.0"
+    "ember-cli-sass": "^7.0.0",
+    "ember-radio-buttons": "^4.0.3"
   }
 }

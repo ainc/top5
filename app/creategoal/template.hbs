@@ -1,0 +1,29 @@
+<div class="section">
+    <div class="container">
+        {{#link-to "index" class="button"}}Home{{/link-to}}
+        <form>
+            <p>Is this your weekly or daily top 5?</p>
+            {{radio-button value="weekly" id="weekly"}}
+            <label for="weekly">Weekly</label>
+            <br>
+            {{radio-button value="daily" id="daily"}}
+            <label for="daily">Daily</label>
+            <br>
+            <br>
+            {{input placeholder="Thing 1" class="top5-input"}}
+            <br>
+            {{input placeholder="Thing 2" class="top5-input"}}
+            <br>
+            {{input placeholder="Thing 3" class="top5-input"}}
+            <br>
+            {{input placeholder="Thing 4" class="top5-input"}}
+            <br>
+            {{input placeholder="Thing 5" class="top5-input"}}
+            <br>
+            {{input placeholder="Personal" class="top5-input"}}
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

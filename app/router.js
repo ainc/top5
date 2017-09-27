@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('list');
+  this.route('creategoal');
 });
 
 export default Router;
