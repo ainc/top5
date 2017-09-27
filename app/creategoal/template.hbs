@@ -3,10 +3,11 @@
         {{#link-to "index" class="button"}}Home{{/link-to}}
         <form>
             <p>Is this your weekly or daily top 5?</p>
-            {{radio-button value="weekly" id="weekly"}}
+            <div>
+            {{radio-button value="weekly" id="weekly" checked="timeframe" name="radio"}}
             <label for="weekly">Weekly</label>
             <br>
-            {{radio-button value="daily" id="daily"}}
+            {{radio-button value="daily" id="daily" checked="timeframe" name="radio"}}
             <label for="daily">Daily</label>
             <br>
             <br>
@@ -21,6 +22,7 @@
             {{input placeholder="Thing 5" class="top5-input"}}
             <br>
             {{input placeholder="Personal" class="top5-input"}}
+            </div>
             <br>
             <br>
             <button type="submit">Submit</button>
