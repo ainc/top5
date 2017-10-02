@@ -27,6 +27,11 @@ body {
   font-family: sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 ul {
   padding-left: none;
   list-style: none;
@@ -55,11 +60,26 @@ button {
 
 li {
   font-size: 1.7rem;
+
 }
 
 input[type=checkbox] {
   transform: scale(2);
   margin-right: 0.5rem;
+}
+
+.title {
+  display: flex;
+
+  &__text {
+    margin: 2.1rem 0.5rem 0.5rem;
+    color: $c-white;
+  }
+}
+
+.logo {
+  height: 3rem;
+  margin: 1.5rem 0.5rem 0.5rem;
 }
 
 
