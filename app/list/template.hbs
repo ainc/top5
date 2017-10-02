@@ -14,8 +14,10 @@
             </div>
             {{#each data as |item|}}
                 <div class="list__item">
+                    <div class="list__item__head">
                     <h3>{{item.name}}</h3>
                     <button {{action "toggleBody" item}}>View Top 5</button>
+                    </div>
                     {{#if item._display}}
                         <p><input type="checkbox" disabled>1: {{item.thing1}}</p>
                         <p><input type="checkbox" disabled>2: {{item.thing2}}</p>
