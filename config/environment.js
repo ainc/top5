@@ -3,6 +3,12 @@
 
 module.exports = function(environment) {
   let ENV = {
+    firebase: {
+      apiKey: 'AIzaSyD1EwRKbiZuluCjNQWl7m8bGHghgztsFmE',
+      authDomain: 'awesome-top-5.firebaseapp.com',
+      databaseURL: 'https://awesome-top-5.firebaseio.com',
+      storageBucket: 'awesome-top-5.appspot.com',
+    },
     modulePrefix: 'top5',
     environment,
     rootURL: '/',
