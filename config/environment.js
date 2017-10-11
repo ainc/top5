@@ -9,6 +9,9 @@ module.exports = function(environment) {
       databaseURL: 'https://awesome-top-5.firebaseio.com',
       storageBucket: 'awesome-top-5.appspot.com',
     },
+    torii: {
+      sessionServiceName: 'session'
+    },
     modulePrefix: 'top5',
     environment,
     rootURL: '/',

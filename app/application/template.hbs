@@ -4,9 +4,23 @@
         <div class="title">
             <img src="/images/awesome_logo.png" class="logo">
             <h1 class="title__text">TOP 5</h1>
+            {{#if session.isAuthenticated}}
+                Logged in as {{session.currentUser.displayName}}
+                <button {{action "signOut"}} class="auth-button">Sign out</button>
+            {{else}}
+                <button {{action "signIn" "google"}} class="auth-button">Sign In with Google</button>
+            {{/if}}
         </div>
         {{/link-to}}
     </div>
 </div>
-
-{{outlet}}
+{{#if session.isAuthenticated}}
+    {{outlet}}
+{{else}}
+    <div class="section">
+        <div class="container">
+            <h1>Welcome!</h1>
+            <button {{action "signIn" "google"}}>Sign In with Google</button>
+        </div>
+    </div>
+{{/if}}
