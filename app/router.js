@@ -9,7 +9,6 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('list');
   this.route('creategoal');
-  this.route('signin');
   this.route('register');
 });
 

@@ -42,7 +42,9 @@ img {
 }
 
 input {
-  border: $c-dark 0.1rem solid;
+  border: $c-dark 0.05rem solid;
+  margin: 0.3rem 0;
+  height: 1.5rem;
 }
 
 button {

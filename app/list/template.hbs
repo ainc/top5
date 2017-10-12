@@ -19,11 +19,9 @@
                     <button {{action "toggleBody" item}}>View Top 5</button>
                     </div>
                     {{#if item._display}}
-                        <p><input type="checkbox" disabled>1: {{item.thing1}}</p>
-                        <p><input type="checkbox" disabled>2: {{item.thing2}}</p>
-                        <p><input type="checkbox" disabled checked>3: {{item.thing3}}</p>
-                        <p><input type="checkbox" disabled checked>4: {{item.thing4}}</p>
-                        <p><input type="checkbox" disabled>5: {{item.thing5}}</p>
+                        {{#each item.bigThings as |thing|}}
+                            <p><input type="checkbox" disabled>{{thing.name}}</p>
+                        {{/each}}
                         <p><input type="checkbox" disabled checked>Personal: {{item.personal}}</p>
                     {{/if}}
                 </div>
