@@ -22,7 +22,9 @@
                         {{#each item.bigThings as |thing|}}
                             <p><input type="checkbox" disabled>{{thing.name}}</p>
                         {{/each}}
-                        <p><input type="checkbox" disabled checked>Personal: {{item.personal}}</p>
+                        {{#each item.personals as |personal|}}
+                        <p><input type="checkbox" disabled checked>Personal: {{personal.name}}</p>
+                        {{/each}}
                     {{/if}}
                 </div>
             {{/each}}

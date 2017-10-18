@@ -1,24 +1,23 @@
 <div class="header">
-    <div class="container">
+  <div class="container">
+    <div class="title">
+      <div class="logo-div">
         {{#link-to 'index'}}
-        <div class="title">
-            <img src="/images/awesome_logo.png" class="logo">
-            {{#if session.isAuthenticated}}
-                <button {{action "signOut"}} class="auth-button">Sign out</button>
-            {{else}}
-                <button {{action "signIn" "google"}} class="auth-button">Sign In with Google</button>
-            {{/if}}
-        </div>
-        {{/link-to}}
+        <img src="/images/awesome_logo.png" class="logo"> {{/link-to}}
+      </div>
+      {{#if session.isAuthenticated}}
+      <button {{action "signOut"}} class="auth-button">Sign out</button>
+      {{else}}
+      <button {{action "signIn" "google"}} class="auth-button">Sign In with Google</button>
+      {{/if}}
     </div>
+  </div>
 </div>
-{{#if session.isAuthenticated}}
-    {{outlet}}
-{{else}}
-    <div class="section">
-        <div class="container">
-            <h1>Welcome!</h1>
-            <button {{action "signIn" "google"}}>Sign In with Google</button>
-        </div>
-    </div>
+{{#if session.isAuthenticated}} {{outlet}} {{else}}
+<div class="section">
+  <div class="container">
+    <h1>Welcome!</h1>
+    <button {{action "signIn" "google"}}>Sign In with Google</button>
+  </div>
+</div>
 {{/if}}
