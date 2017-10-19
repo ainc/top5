@@ -3,31 +3,9 @@
         {{#link-to "index" class="button"}}Home{{/link-to}}
         <div class="list">
             <div class="list__user">
-                <h2>Your Top 5</h2>
-                <ul>
-                    <li><input type="checkbox">xxxxxx</li>
-                    <li><input type="checkbox">xxxxxx</li>
-                    <li><input type="checkbox">xxxxxx</li>
-                    <li><input type="checkbox">xxxxxx</li>
-                    <li><input type="checkbox">xxxxxx</li>
-                </ul>
+                <h2>{{session.currentUser.displayName}}'s Top 5</h2>
             </div>
-            {{#each model as |item|}}
-                <div class="list__item">
-                    <div class="list__item__head">
-                    <h3>{{item.name}}</h3>
-                    <button {{action "toggleBody" item}}>View Top 5</button>
-                    </div>
-                    {{#if item._display}}
-                        {{#each item.bigThings as |thing|}}
-                            <p><input type="checkbox" disabled>{{thing.name}}</p>
-                        {{/each}}
-                        {{#each item.personals as |personal|}}
-                        <p><input type="checkbox" disabled checked>Personal: {{personal.name}}</p>
-                        {{/each}}
-                    {{/if}}
-                </div>
-            {{/each}}
+            {{outlet}}
         </div>
     </div>
 </div>

@@ -162,3 +162,14 @@ input[type=checkbox] {
   margin: auto 0.5rem;
   cursor: pointer;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  > * {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 0.5rem;
+  }
+}

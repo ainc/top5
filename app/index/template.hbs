@@ -1,15 +1,13 @@
 <div class="section">
     <div class="container">
         <div class="status">
-            <h3 class="status__text">Your current completion status:</h3>
-            <h1 class="status__percent">100%</h1>
+            <h3>Logged in as {{session.currentUser.displayName}}</h3>
+            <h3>Current completion status:</h3>
+            <h2>100%</h2>
         </div>
-        <div class="current-week">
-            <h3>Week of x/x/x</h3>
-            <div class="buttons">
-                {{#link-to "creategoal" class="button"}}Add a new goal{{/link-to}}
-                {{#link-to "list" class="button"}}View this week's Top 5{{/link-to}}
-            </div>
+        <div class="nav">
+        {{#link-to 'creategoal' class="button"}}Create a new goal{{/link-to}}
+        {{#link-to 'list' class="button"}}View Top Fives{{/link-to}}
         </div>
     </div>
 </div>

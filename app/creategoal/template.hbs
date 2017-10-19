@@ -1,14 +1,15 @@
 <div class="section">
     <div class="container">
         {{#link-to "index" class="button"}}Home{{/link-to}}
-        <form {{action "save" on="submit"}}>
+        {{outlet}}
+        {{!-- <form {{action "save" on="submit"}}>
             <p>Is this your weekly or daily top 5?</p>
             <div>
-            {{!-- {{radio-button value="weekly" id="weekly" checked="timeframe" name="radio"}}
+            {{radio-button value="weekly" id="weekly" checked="timeframe" name="radio"}}
             <label for="weekly">Weekly</label>
             <br>
             {{radio-button value="daily" id="daily" checked="timeframe" name="radio"}}
-            <label for="daily">Daily</label> --}}
+            <label for="daily">Daily</label>
             <br>
             <br>
             {{input placeholder="Name" class="top5-input" value=formValues.name}}
@@ -28,6 +29,6 @@
             <br>
             <br>
             <button type="submit">Submit</button>
-        </form>
+        </form> --}}
     </div>
 </div>

@@ -1,0 +1,12 @@
+<form {{action "save" on="submit"}}>
+    <div>
+        <p>Is this your weekly or daily top 5?</p>
+        {{radio-button value="weekly" id="weekly" checked=formValues.timeframe name="weekly"}}
+        <label for="weekly">Weekly</label>
+        <br> 
+        {{radio-button value="daily" id="daily" checked=formValues.timeframe name="daily"}}
+        <label for="daily">Daily</label>
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+</form>
