@@ -1,6 +1,6 @@
 <br>
 <br>
-<form {{action "save" on "submit"}}>
+<form {{action "save" on="submit"}}>
     {{!-- <div>
     {{radio-button value="bigThing" id="bigThing" checked=formValues.priority name="bigThing"}}
     <label for="bigThing">Big Thing</label>
@@ -8,6 +8,15 @@
     {{radio-button value="personal" id="personal" checked=formValues.priority name="personal"}}
     <label for="personal">Personal</label>
     </div> --}}
-    {{input placeholder="Your Goal" class="top5-input" value=formValues.content}}
+    <div>
+        {{input placeholder="Your Goal" class="top5-input" value=formValues.content}}
+    </div>
     <button type="submit">Add Goal</button>
 </form>
+
+{{#each model.bigThings as |goal|}}
+    <p>
+        <input type="checkbox" checked="{{if goal.finished 'checked'}}" onclick={{action (mut goal.finished) value=target.checked}} />
+        {{goal.name}}
+    </p>
+{{/each}}

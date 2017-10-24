@@ -8,14 +8,13 @@ export default Ember.Controller.extend({
 
     actions: {
         save() {
-            // if (this.formValues.priority == 'bigThing') {
-                const goal = this.store.createRecord('bigThing', {
-                    name: this.formValues.content,
-                    finished: false,
-                });
-                goal.save();
-                this.set('formvalues', {});
-            // }
+            const goal = this.store.createRecord('bigThing', {
+                name: this.formValues.content,
+                finished: false,
+                top5: this.get('model'),
+            });
+            goal.save();
+            this.set('formValues', {});
         }
     }
 });
