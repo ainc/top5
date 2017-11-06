@@ -11,9 +11,10 @@ export default Ember.Controller.extend({
             const goal = this.store.createRecord('bigThing', {
                 name: this.formValues.content,
                 finished: false,
-                top5: this.get('model'),
+                // top5: this.get('model'),
             });
             goal.save();
+            goal.set('top5', this.get('model'));
             this.set('formValues', {});
         }
     }
