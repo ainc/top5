@@ -14,9 +14,9 @@
     <button type="submit">Add Goal</button>
 </form>
 
-{{#each model.bigThings as |goal|}}
+{{#each model.goals as |goal|}}
     <p>
-        <input type="checkbox" checked="{{if goal.finished 'checked'}}" onclick={{action (mut goal.finished) value=target.checked}} />
+        <input type="checkbox" checked={{if goal.finished 'checked'}} onclick={{action (mut goal.finished)}} />
         {{goal.name}}
     </p>
 {{/each}}

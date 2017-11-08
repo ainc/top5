@@ -13,8 +13,6 @@ export default Ember.Controller.extend({
                 name: this.session.content.currentUser.displayName,
                 user: this.session.content.uid,
                 timeframe: this.formValues.timeframe,
-                bigThings: [],
-                personals: [],
             });
             top5.save();
             this.set('formValues', {});
