@@ -18,6 +18,17 @@ export default Ember.Controller.extend({
                 return top5.save();
             });
             this.set('formValues', {});
+        },
+        
+        toggle(goal) {
+            const state = goal.get('finished');
+            if (state) {
+                goal.set('finished', false);
+                goal.save();
+            } else {
+                goal.set('finished', true);
+                goal.save();
+            }
         }
     }
 });

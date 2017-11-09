@@ -16,7 +16,7 @@
 
 {{#each model.goals as |goal|}}
     <p>
-        <input type="checkbox" checked={{if goal.finished 'checked'}} onclick={{action (mut goal.finished)}} />
+        <input type="checkbox" checked={{if goal.finished 'checked'}} onchange={{action "toggle" goal}} />
         {{goal.name}}
     </p>
 {{/each}}
