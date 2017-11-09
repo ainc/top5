@@ -4,14 +4,10 @@
         <h3>{{item.name}}</h3>
         <button {{action "toggleBody" item}}>View Top 5</button>
     </div>
-    {{#if item._display}} {{#each item.goals as |thing|}}
+    {{!-- {{#if item._display}} {{#each item.goals as |thing|}}
     <p>
         <input type="checkbox" disabled>{{thing.name}}</p>
     {{/each}} 
-    {{!-- {{#each item.personals as |personal|}}
-    <p>
-        <input type="checkbox" disabled checked>Personal: {{personal.name}}</p>
-    {{/each}}  --}}
-    {{/if}}
+    {{/if}} --}}
 </div>
 {{/each}}
