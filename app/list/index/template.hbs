@@ -4,9 +4,11 @@
         <h3>{{item.name}}</h3>
         <button {{action "toggleBody" item}}>View Top 5</button>
     </div>
-    {{!-- {{#if item._display}} {{#each item.goals as |thing|}}
+    {{!-- {{#if item._display}}  --}}
+    {{#each item.goals as |goal|}}
     <p>
-        <input type="checkbox" disabled>{{thing.name}}</p>
-    {{/each}} {{/if}} --}}
+        <input type="checkbox" checked={{if goal.finished 'checked'}} disabled>{{goal.name}}</p>
+    {{/each}} 
+    {{!-- {{/if}} --}}
 </div>
 {{/each}}

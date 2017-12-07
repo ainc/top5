@@ -7,7 +7,9 @@ module.exports = function(environment) {
       apiKey: 'AIzaSyD1EwRKbiZuluCjNQWl7m8bGHghgztsFmE',
       authDomain: 'awesome-top-5.firebaseapp.com',
       databaseURL: 'https://awesome-top-5.firebaseio.com',
+      projectId: 'awesome-top-5',
       storageBucket: 'awesome-top-5.appspot.com',
+      messagingSenderId: '258616053668'
     },
     torii: {
       sessionServiceName: 'session'
