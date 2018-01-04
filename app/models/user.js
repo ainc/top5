@@ -8,5 +8,5 @@ export default DS.Model.extend({
     //     const profile = user.getBasicProfile();
     //     return profile.getName();
     // }),
-    top5s: DS.hasMany('top5'),
+    // top5s: DS.hasMany('top5'),
 });
